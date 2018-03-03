@@ -5,8 +5,105 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/logo.png" width="138" height="70" alt="City of Sedona»">
+        </a>
+        <ul class="site-navigation">
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="photoandvideo.html">Фото и видео</a></li>
+            <li><a href="statemap.html">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+      <b>Седона-небольшой городок в Аризоне, заслуживающий большего!</b>
+      <section class="features">
+        <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
+        <div class="features-line-1">
+          <h3>Настоящий городок</h3>
+          <span>-№1-</span>
+          <p>Седона-не аттракцион для туристов, там течет своя жизнь</p>
+          <img src="img/city.png" alt="Город">
+        </div>
+        <div class="features-line-2">
+          <ul class="features-list">
+            <li class="features-item">
+              <h3>Жилье</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="features-item">
+              <h3>Еда</h3>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li class="features-item">
+              <h3>Сувениры</h3>
+              <p>Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </div>
+        <div class="features-line-3">
+          <h3>Там есть мост дьявола</h3>
+          <span>-№2-</span>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <img src="img/bridge.png" alt="Мост">
+        </div>
+        <div class="features-line-4">
+          <ul class="features-list">
+            <li>
+            <h3>Небольшая площадь</h3>
+            <span>-№3-</span>
+            <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li>
+            <h3>Красивая дорога</h3>
+            <span>-№4-</span>
+            <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li>
+            <h3>Мало туристов</h3>
+            <span>-№5-</span>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="appointment">
+        <h2>Заинтресовались?</h2>
+        <b>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</b>
+        <h4>Поиск гостиниц в Седоне</h4>
+        <form action="#" method="get">
+          <label for="entrance-field">Дата заезда:</label>
+          <input type="text" name="entrancedate" id="entrance-field" value="24 апреля 2017"><br>
+          <label for="departure-field">Дата выезда:</label>
+          <input type="text" name="departuredate" id="departure-field" value="4 июля 2017"><br>
+          <label for="adult-field">Взрослые:</label>
+          <input type="text" name="adult" id="adult-field" value="2">
+          <label for="child-field">Дети:</label>
+          <input type="text" name="child" id="child-field" value="0"><br>
+          <!-- Так как формы еще непроходили на лекции записала пока так -->
+          <input type="submit" value="Найти">
+        </form>
+      </section>
+      <section class="map">
+          <!-- Не могу понять появляющееся это окно или постоянное, если постоянное, то добавить с помощью img? -->
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p class="hashtag">#VISITSEDONA</p>
+      <div class="footer-social">
+        <ul class="social-list">
+          <li><a class="social-button" href="https://twitter.com">Твитер</a></li>
+          <li><a class="social-button" href="https://facebook.com">Фейсбук</a></li>
+          <li><a class="social-button" href="https://youtubek.com">Youtube</a></li>
+        </ul>
+      </div>
+      <a class="footer-logo">WEBSITE BY
+        <img src="img/logo_namehtml.png" alt="htmlacademy»">
+      </a>
+    </footer>
   </body>
 </html>
