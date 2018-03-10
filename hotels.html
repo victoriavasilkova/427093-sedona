@@ -23,8 +23,8 @@
         <h1 class="visually-hidden">Описание отелей</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтр жилья</h2>
-          <form>
-            <!-- Есть ли смысл менять div на fieldset? -->
+          <form method="post">
+          </form>
             <div class="filter-col">
               <p class="filter-title">Инфраструктура</p>
               <ul class="filter-list">
@@ -62,28 +62,28 @@
             <div class="filter-range">
             <p class="filter-title">Стоимость в сутки(p):</p>
               <div class="filter-form">
-                <!-- Проблема с ползунками -->
+                <!-- Ползунки -->
                 <label for="price"></label>
                 <input type="range" id="price" min="0" max="3000"/><br>
-                <button type="submit" class="button">Показать</button>
+                <button type="submit" class="filters-button">Показать</button>
               </div>
             </div>
-        </form>
+          </form>
         </section>
         <section class="hotels">
-          <div>
-          <b class="hotels-result">Найдено: 3</b>
-          </div>
-          <div class="sort">
-            <p class="sort-title">Сортировка:</p>
-            <ul class="sort-type">
-              <li><button type="button" class="active">По цене</button></li>
-              <li><button type="button">По типу</button></li>
-              <li><button type="button">По рейтингу</button></li>
-            </ul>
-          </div>
-          <div>
-            <!-- Блок со стрелочками -->
+          <div class="results-filters"
+            <b class="result-hotels">Найдено: 3</b>
+            <div class="sort">
+              <p class="sort-title">Сортировка:</p>
+              <ul class="sort-type">
+                <li><button type="button" class="active">По цене</button></li>
+                <li><button type="button">По типу</button></li>
+                <li><button type="button">По рейтингу</button></li>
+              </ul>
+            </div>
+            <div class="sort-arrows">
+              <!-- Блок со стрелочками -->
+            </div>
           </div>
           <h2 class="visually-hidden">Варианты жилья</h2>
           <ul class="hotels-list">
@@ -113,7 +113,6 @@
                 <p>Рейтинг:8,5</p>
               </div>
             </li>
-
             <li class="hotels-item">
               <div class="hotel-img">
                 <img src="img/Desert.jpg" width="135" height="90" alt="Desert quail inn">
@@ -138,7 +137,6 @@
                 <p>Рейтинг:8,9</p>
               </div>
             </li>
-
             <li class="hotels-item">
               <div class="hotel-img">
                 <img src="img/Villas.jpg" width="135" height="90" alt="Villas at poco diablo">
@@ -165,22 +163,17 @@
           </ul>
         </section>
       </main>
-
-      <footer class="footer">
+      <footer class="footer footer-index">
         <p class="hashtag">#VISITSEDONA</p>
-        <div class="footer-social">
-          <ul class="social-btns">
-            <li><a class="social-btn social-btn-twitter" href="https://twitter.com" aria-label="Твиттер"></a></li>
-            <li><a class="social-btn social-btn-facebook" href="https://facebook.com" aria-label="Фейсбук"></a></li>
-            <li><a class="social-btn social-btn-youtube" href="https://youtube.com" aria-label="Youtube"></a></li>
-          </ul>
-        </div>
+        <ul class="social-btns">
+          <li><a class="social-btn social-btn-twitter" href="https://twitter.com" aria-label="Твиттер"></a></li>
+          <li><a class="social-btn social-btn-facebook" href="https://facebook.com" aria-label="Фейсбук"></a></li>
+          <li><a class="social-btn social-btn-youtube" href="https://youtube.com" aria-label="Youtube"></a></li>
+        </ul>
         <div class="copyright">
           <span>WEBSITE BY</span>
           <a href="https://htmlacademy.ru/">
-            <img
-            src="img/logo-htmlacademy.svg" width="115" height="41"
-            alt="html-logo">
+            <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="html-logo">
           </a>
         </div>
       </footer>
