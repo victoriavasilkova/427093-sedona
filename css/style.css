@@ -10,29 +10,46 @@ body {
   text-transform: uppercase;
 }
 
-.wrapper {}
-
-
 a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .button {
   font: inherit;
-  text-align: center;
   color: rgb(255, 255, 255);
   vertical-align: middle;
+  text-transform: uppercase;
   border: none;
-  background-color: rgb{129, 179, 210};
+  background-color: rgb(129, 179,210);
 }
 
-.button-brown {
-  background-color: rgb{118, 99, 87};
+a.button .button-brown {
+  color: rgb(118, 99, 87);
 }
 
+.wrapper {
+  background-image: url("../img/bg.jpg");
+  width: 1200px;
+  height: 773px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.site-navigation,
+.hotel-page .wrapper {
+  background-image: transparent;
+}
+
 .social-btns,
+.feature-row,
 .filter-list,
 .sort-type,
 .hotels-list {
@@ -45,37 +62,42 @@ a {
 }
 
 .site-navigation a:hover,
-.hotel-name:hover,
-.copyright a:hover {
+.hotel-name:hover {
   color: rgb(129, 179,210);
 }
 
+a:hover path {
+  fill: rgb(129, 179,210);
+}
+
 .site-navigation a:active,
-.hotel-name:active,
-.copyright a:hover {
+.hotel-name:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+a:active path {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 a.active {
   color: rgb(118, 99, 87);
 }
 
-.intro {
-  background-image: url("img/bg.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-}
-
 .features-title {
   font-size: 21px;
   font-weight: 700;
 }
+
+.feature-row {
+  line-height: 21px;
+}
 .feature-title {
-    font-size: 21px;
-    font-weight: 700;
+  font-size: 21px;
+  font-weight: 700;
 }
 
 .features {
+  background-color: rgb(255, 255, 255);
   text-align: center;
 }
 
@@ -87,19 +109,50 @@ a.active {
   background-color: rgb(238, 238,238);
 }
 
+.booking-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.booking button {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.hashtag {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.filters {
+  background-image: url("../img/filterbackground.jpg");
+  width: 1200px;
+  min-height: 217px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  background-color: rgb(129, 179,210);
+}
 
 .filter-title {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
-  text-align: center;
 }
 
 .results-total {
   font-size: 21px;
+  font-weight: 700;
 }
 
-.hotel-description a{
+.sort {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.hotel-description a {
   color: rgb(0, 0, 0);
 }
 
@@ -108,18 +161,237 @@ a.active {
   font-weight: 700;
 }
 
+.hotel-type,
+.hotel-price {
+  line-height: 21px;
+}
+
+.hotel-description .button {
+  line-height: 21px;
+  font-weight: 700;
+}
+
 .hotel-description-col a {
   background-color: rgb(129, 179,210);
 }
 
-a.button-brown {
-  background-color: rgb(118, 99, 87);
+.rating {
+  line-height: 21px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.visually-hidden {
+a.sort-link {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dashed rgb(129, 179,210);
+}
+
+a.sort-link:hover {
+  color: rgb(129, 179,210);
+}
+
+a.sort-link:active {
+  color: rgb(0, 0, 0);
+  border-bottom: none;
+}
+
+a.sort-link .sort-link-active {
+  color: rgb(129, 179,210);
+  border-bottom: none;
+}
+
+/* ----- Сеточные стили ----- */
+
+html,
+body {
+  min-width: 1200px;
+  min-height: 2760px;
+}
+
+/*
+**::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.content-box-component {
+  box-sizing: border-box;
+}
+*/
+.main-header {
+  width: 1200px;
+  margin-bottom: 75px;
+}
+
+.site-navigation {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid black; /* Временно */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60px;
+}
+
+}
+.header-logo {
   position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  left: 50%; /* Какой размер взять */
+  width: 140px;
+  height: 70px;
+}
+
+.intro img {
+  width: 458px;
+  height: 352px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 140px;
+}
+
+.features {
+  margin-bottom: 55px;
+  outline: 1px solid black; /* Временно */
+}
+
+h2.features-title {
+  width: 440px;
+  min-height: 48px; /* Или сделать перенос через <br>? */
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.feature-description {
+  margin-bottom: 60px;
+}
+
+.feature-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid black;
+}
+
+.feature {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid black; /* Временно */
+}
+
+.feature .feature-img {
+  width: 800px;
+  height: 256px;
+  outline: 1px solid black; /* Временно */
+}
+
+.booking-form {
+  width: 575px;
+  margin: 0;
+  padding: 0 5px;
+  text-align: center;
+  outline: 1px solid black; /* Временно */
+}
+
+.booking {
+  min-height: 480px;
+}
+
+.map {
+  outline: 1px solid black; /* Временно */
+}
+
+
+.footer {
+  padding: 36px 0;
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 1px solid black; /* Временно */
+}
+
+.hashtag {
+  width: 136px;
+  margin: 0;
+  margin-right: 256px;
+  margin-left: 132px;
+}
+
+.footer .social-btns {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid black; /* Временно */
+  min-height: 50px; /* Временно */
+}
+
+.copyright {
+  width: 200px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.filters form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  outline: 1px solid black; /* Временно */
+}
+
+.filter-col:nth-child(2) {
+  margin-right: auto; /* Или лучше flex-grow? */
+}
+
+.filter-col {
+  width: 240px;
+  outline: 1px solid black; /* Временно */
+}
+
+.hotels,
+.hotel-description {
+  padding-top: 1px; /* или border-top: 1px solid transporent; */
+}
+
+.results-filters {
+  outline: 1px solid black; /* Временно */
+}
+
+.hotels-list {
+  margin: 0;
+  padding: 0;
+}
+
+li.hotels-item {
+  display: flex;
+  outline: 1px solid black; /* Временно */
+}
+
+.hotels-item div {
+  outline: 1px solid black; /* Временно */
+}
+
+.hotel-img {
+  margin-left: 14px;
+  margin-right: 6px;
+}
+
+.hotel-description {
+  margin-right: auto; /* Или лучше flex-grow? */
+}
+
+.hotel-rating {
+  margin-right: 14px;
 }
