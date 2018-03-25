@@ -62,13 +62,19 @@
               </ul>
             </div>
             <div class="filter-range">
-              <p class="filter-title">Стоимость в сутки(p):</p>
-              <div class="filter-form">
-                <!-- Ползунки -->
-                <label for="price"></label>
-                <input type="range" id="price" min="0" max="3000"/><br>
-                <button type="submit" class="filters-button">Показать</button>
+              <div class="filter-title">Стоимость в сутки(p):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
               </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button type="submit" class="btn-transparent">Показать</button>
             </div>
           </form>
         </section>
@@ -107,11 +113,10 @@
               </div>
               <div class="hotel-rating">
                 <div class="hotel-stars">
-                  <span>Звезда</span>
-                  <span>Звезда</span>
-                  <span>Звезда</span>
-                  <span>Звезда</span>
-                  <span>Звезда</span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
                 </div>
                 <p class="rating">Рейтинг: 8,5</p>
               </div>
