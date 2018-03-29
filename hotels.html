@@ -15,10 +15,10 @@
             <img src="img/logo.png" width="138" height="70" alt="City of Sedona">
           </a>
           <ul class="site-navigation">
-            <li><a href="info.html">Информация</a></li>
-            <li><a href="photoandvideo.html">Фото и видео</a></li>
-            <li><a href="statemap.html">Карта штата</a></li>
-            <li><a class="active">Гостиницы</a></li>
+            <li><a class="menu-item" href="info.html">Информация</a></li>
+            <li><a class="menu-item" href="photoandvideo.html">Фото и видео</a></li>
+            <li><a class="menu-item" href="statemap.html">Карта штата</a></li>
+            <li><a class="menu-item active">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -27,42 +27,42 @@
         <section class="filters">
           <h2 class="visually-hidden">Фильтр жилья</h2>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <div class="filter-col filter-col-one">
+            <div class="filter-col">
               <p class="filter-title">Инфраструктура</p>
               <ul class="filter-list">
                 <li class="filter-item">
-                  <input type="checkbox" name="pool" id="pool-field" checked>
-                  <label for="pool-field">Бассейн</label>
+                  <input class="checkbox-field" type="checkbox" name="pool" id="pool-field" checked>
+                  <label class="checkbox-label" for="pool-field">Бассейн</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="parking" id="parking-field">
-                  <label for="parking-field">Парковка</label>
+                  <input class="checkbox-field" type="checkbox" name="parking" id="parking-field">
+                  <label class="checkbox-label" for="parking-field">Парковка</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="wifi" id="wifi-field">
-                  <label for="wifi-field">Wi-Fi</label>
+                  <input class="checkbox-field" type="checkbox" name="wifi" id="wifi-field">
+                  <label class="checkbox-label" for="wifi-field">Wi-Fi</label>
                 </li>
               </ul>
             </div>
-            <div class="filter-col filter-col-two">
+            <div class="filter-col">
               <p class="filter-title">Тип жилья:</p>
               <ul class="filter-list">
                 <li class="filter-item">
-                  <input type="checkbox" name="hotel" id="hotel-field" checked>
-                  <label for="hotel-field">Гостиница</label>
+                  <input class="checkbox-field" type="checkbox" name="hotel" id="hotel-field" checked>
+                  <label class="checkbox-label" for="hotel-field">Гостиница</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="motel" id="motel-field" checked>
-                  <label for="motel-field">Мотель</label>
+                  <input class="checkbox-field" type="checkbox" name="motel" id="motel-field" checked>
+                  <label class="checkbox-label" for="motel-field">Мотель</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="apartments" id="apartments-field" checked>
-                  <label for="apartments-field">Апартаменты</label>
+                  <input class="checkbox-field" type="checkbox" name="apartments" id="apartments-field" checked>
+                  <label class="checkbox-label" for="apartments-field">Апартаменты</label>
                 </li>
               </ul>
             </div>
             <div class="filter-range">
-              <div class="filter-title">Стоимость в сутки(p):</div>
+              <div class="price-title">Стоимость в сутки(p):</div>
               <div class="price-controls">
                 <label class="min-price">от <input type="text" name="min-price" value="0"></label>
                 <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
@@ -74,7 +74,7 @@
                 <div class="range-toggle range-toggle-min"></div>
                 <div class="range-toggle range-toggle-max"></div>
               </div>
-              <button type="submit" class="btn-transparent">Показать</button>
+              <button type="submit" class="button btn-transparent">Показать</button>
             </div>
           </form>
         </section>
@@ -91,8 +91,8 @@
               </ul>
             </div>
             <div class="sort-arrows">
-              <a href="#" class="arrow arrow-up">Кнопка вверх</a>
-              <a href="#" class="arrow arrow-down arrow-active">Кнопка вниз</a>
+              <a href="#" class="arrow arrow-up"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg></a>
+              <a href="#" class="arrow arrow-down arrow-active"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 10L0 0h11"/></svg></a>
             </div>
           </div>
           <ul class="hotels-list">
@@ -104,19 +104,19 @@
                 <a class="hotel-name" href="#">Amara Resort & Spa</a>
                 <div class="hotel-description-col">
                   <p class="hotel-type">Гостиница</p>
-                  <a class="button" href="#">Подробнее</a>
+                  <button type="submit" class="button">Подробнее</button>
                 </div>
                 <div class="hotel-description-col">
                   <p class="hotel-price">от 4000 р.</p>
-                  <a class="button button-brown" href="#">Забронировать</a>
+                  <button type="submit" class="button button-brown">Забронировать</button>
                 </div>
               </div>
               <div class="hotel-rating">
                 <div class="hotel-stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                  <span class="star">Звезда</span>
+                  <span class="star">Звезда</span>
+                  <span class="star">Звезда</span>
+                  <span class="star">Звезда</span>
                 </div>
                 <p class="rating">Рейтинг: 8,5</p>
               </div>
@@ -129,11 +129,11 @@
                 <a class="hotel-name" href="#">Desert quail inn</a>
                 <div class="hotel-description-col">
                   <p class="hotel-type">Мотель</p>
-                  <a class="button" href="#">Подробнее</a>
+                  <button type="submit" class="button">Подробнее</button>
                 </div>
                 <div class="hotel-description-col">
                   <p class="hotel-price">от 3000 р.</p>
-                  <a class="button button-brown" href="#">Забронировать</a>
+                  <button type="submit" class="button button-brown">Забронировать</button>
                 </div>
               </div>
               <div class="hotel-rating">
@@ -153,11 +153,11 @@
                 <a class="hotel-name" href="#">Villas at poco diablo</a>
                 <div class="hotel-description-col">
                   <p class="hotel-type">Апартаменты</p>
-                  <a class="button" href="#">Подробнее</a>
+                  <button type="submit" class="button">Подробнее</button>
                 </div>
                 <div class="hotel-description-col">
                   <p class="hotel-price">от 2000 р.</p>
-                  <a class="button button-brown" href="#">Забронировать</a>
+                  <button type="submit" class="button button-brown">Забронировать</button>
                 </div>
               </div>
               <div class="hotel-rating">
@@ -175,7 +175,7 @@
         <p class="hashtag">#Visitsedona</p>
         <ul class="social-btns">
           <li><a class="social-btn social-btn-twitter" href="https://twitter.com" aria-label="Твиттер">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#ffffff" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#ffffff" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
             </svg>
           </a></li>
           <li><a class="social-btn social-btn-facebook" href="https://facebook.com" aria-label="Фейсбук">
