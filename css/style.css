@@ -97,7 +97,8 @@ img {
   color: #000000;
 }
 
-.menu-item:hover {
+.menu-item:hover,
+.menu-item:focus {
   color: #81b3d2;
 }
 
@@ -572,7 +573,8 @@ form .button-search:focus {
   vertical-align: middle;
 }
 
-.logo-html:hover path {
+.logo-html:hover path,
+.logo-html:focus path {
   fill: #81b3d2;
 }
 
@@ -583,7 +585,7 @@ form .button-search:focus {
 .filters {
   width: 100%;
   height: auto;
-  padding: 30px 72px;
+  padding: 29px 72px;
   color: #ffffff;
   background-image: url("../img/filterbackground.jpg");
   background-color: #81b3d2;
@@ -757,14 +759,15 @@ form .button-search:focus {
   cursor: pointer;
 }
 
-.filter-range .btn-transparent:hover {
+.filter-range .btn-transparent:hover,
+.filter-range .btn-transparent:focus {
   color: #000000;
   background: #ffffff;
 }
 
 .results-filters {
   display: flex;
-  padding: 30px 72px;
+  padding: 28px 72px;
   border-bottom: 1px solid #f2f2f2;
 }
 
@@ -776,13 +779,13 @@ form .button-search:focus {
 
 .sort {
   display: flex;
-  margin: 0;
-  padding: 0;
   align-items: center;
+  outline: 1px solid black;
 }
 
 .sort-title {
   margin: 0;
+  margin-right: 40px;
   padding: 0;
   font-size: 12px;
   line-height: 18px;
@@ -790,6 +793,8 @@ form .button-search:focus {
 
 .sort-type {
   display: flex;
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
   list-style: none;
@@ -813,7 +818,8 @@ a.sort-link-active {
   border-bottom: none;
 }
 
-.sort-link:hover {
+.sort-link:hover,
+.sort-link:focus {
   color: #81b3d2;
 }
 
@@ -859,7 +865,7 @@ a.sort-link-active {
 .hotels-item {
   display: flex;
   align-items: flex-start;
-  padding: 30px 72px;
+  padding: 28px 72px;
   border-bottom: 1px solid #f2f2f2;
 }
 
@@ -891,7 +897,8 @@ a.sort-link-active {
   font-weight: 700;
 }
 
-.hotel-name:hover {
+.hotel-name:hover,
+.hotel-name:focus {
   color: #81b3d2;
 }
 
