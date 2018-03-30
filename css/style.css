@@ -212,7 +212,7 @@ img {
 
 .feature-icon {
   padding-top: 165px;
-  padding-bottom: 72px;
+  padding-bottom: 77px;
 }
 
 .feature-icon-home .feature-title::before {
@@ -313,7 +313,7 @@ img {
 
 .booking .button-brown {
   width: 100%;
-  padding: 29px 140px;
+  padding: 29px 135px;
   font-size: 21px;
   line-height: 26px;
   background-color: #766357;
@@ -422,24 +422,25 @@ img {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 .booking-amount {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 50%;
   margin: 0;
   padding: 0;
+  font-weight: 700;
 }
 
-.booking-amount label {
-  width: 100px;
-  margin: 0;
-  margin-right: 30px;
-  padding: 0;
-  font-weight: 700;
+.adult-field {
+  margin-right: 40px;
+}
+
+.child-field {
+  margin-right: 20px;
 }
 
 .booking-amount input {
@@ -449,7 +450,7 @@ img {
 }
 
 .booking-btn {
-  width: 44px;
+  width: 40px;
   height: 38px;
   font-size: 28px;
   font-weight: 700;
@@ -460,6 +461,14 @@ img {
   cursor: pointer;
 }
 
+.booking-btn:hover,
+.booking-btn:active {
+  color: #000000;
+}
+
+.booking-btn:active {
+  color: #81b3d2;
+}
 
 form .button-search {
   display: block;
@@ -780,7 +789,6 @@ form .button-search:focus {
 .sort {
   display: flex;
   align-items: center;
-  outline: 1px solid black;
 }
 
 .sort-title {
@@ -968,7 +976,7 @@ a.sort-link-active {
 .hotel-stars span {
   width: 20px;
   height: 20px;
-  margin-right: 6px;
+  margin-right: 5px;
   font-size: 0;
   background-image: url("../img/star.svg");
   background-repeat: no-repeat;
