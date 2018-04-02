@@ -5,7 +5,7 @@ body {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
-  color: #000000;
+  color: #333333;
   text-transform: uppercase;
   background-color: #f2f2f2;
 }
@@ -62,8 +62,8 @@ img {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 6px 9px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 6px 9px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.28);
+          box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.28);
 }
 
 .navigation {
@@ -74,6 +74,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 15px 0;
@@ -87,7 +89,11 @@ img {
 }
 
 .site-navigation li:nth-child(2) {
-  margin-right: 20%;
+  margin-right: 10%;
+}
+
+.site-navigation li:nth-child(3) {
+  margin-left: 10%;
 }
 
 .header-logo {
@@ -100,18 +106,18 @@ img {
 }
 
 .site-navigation a {
-  display: block;
   font-weight: 700;
   color: #000000;
 }
 
-.menu-item:hover,
-.menu-item:focus {
+.site-navigation a:hover,
+.site-navigation a:focus {
   color: #81b3d2;
+  outline: none;
 }
 
-.menu-item:active {
-  color: #cacaca;
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .site-navigation .active {
@@ -164,6 +170,7 @@ img {
   padding: 0;
   font-size: 21px;
   font-weight: 700;
+  color: #000000;
 }
 
 .feature-description {
@@ -188,8 +195,13 @@ img {
 
 .feature-row-blue {
   background-color: #81b3d2;
-  color: #ffffff;;
+  color: #ffffff;
 }
+
+.feature-row-blue .feature-title {
+  color: #ffffff;
+}
+
 .feature-row-grey {
   background-color: #eeeeee;
 }
@@ -290,6 +302,7 @@ img {
   padding: 0;
   font-size: 21px;
   font-weight: 700;
+  color: #000000;
 }
 
 .feature p {
@@ -324,6 +337,7 @@ img {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  color: #000000;
 }
 
 .booking-info {
@@ -338,6 +352,7 @@ img {
 .booking {
   width: 568px;
   margin: 0 auto;
+  color: #000000;
 }
 
 .booking .button-brown {
@@ -419,6 +434,8 @@ img {
 .booking-item label {
   width: 100px;
   display: inline-block;
+  vertical-align: middle;
+  height: 26px;
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -445,18 +462,33 @@ img {
       flex-shrink: 1;
 }
 
+.field::-moz-placeholder {
+  opacity: 1;
+  color: @font-color;
+}
+
+.field::-webkit-input-placeholder {
+  opacity: 1;
+  color: @font-color;
+}
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
 .field:hover {
   background-color: #ebebeb;
 }
 
 .field:focus {
   background-color: #ffffff;
-  border: 1px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
 }
 
 .calendar {
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 2px;
   border: 0;
   font-size: 0;
@@ -512,6 +544,7 @@ img {
 
 .booking-amount input {
   width: 40px;
+  height: 38px;
   padding: 11px 0;
   text-align: center;
 }
@@ -645,12 +678,12 @@ form .button-search:focus {
   background-color: #81b3d2;
 }
 
-.social-btn:hover {
+.social-btn:hover,
+.social-btn:focus {
   background-color: #669ec0;
-  fill: #ffffff;
 }
 
-.social-btn:focus {
+.social-btn:active path {
   background-color: #5496bd;
   fill: #cacaca;
 }
@@ -667,6 +700,7 @@ form .button-search:focus {
           align-items: center;
   width: 33.333333%;
   margin: 0;
+  color: #000000;
 }
 
 .copyright svg {
@@ -680,7 +714,7 @@ form .button-search:focus {
 }
 
 .logo-html:active path {
-  fill: #cacaca;
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .filters {
@@ -742,14 +776,14 @@ form .button-search:focus {
 .checkbox-label::before {
   content: "";
   position: absolute;
-  width: 27px;
+  width: 23px;
   height: 23px;
   left: 0px;
   top: 1px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 27px 23px;
+  background-size: 23px 23px;
 }
 
 .checkbox-field:checked + .checkbox-label::before {
@@ -762,7 +796,16 @@ form .button-search:focus {
 }
 
 .checkbox-field:disabled + .checkbox-label::before {
-  opacity: 0.6;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/disabled-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 27px 23px;
+}
+
+.checkbox-field:disabled + .checkbox-label {
+  color: #766357;
 }
 
 .filter-range {
@@ -828,7 +871,7 @@ form .button-search:focus {
 
 .range-controls {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .range-controls .scale {
@@ -843,20 +886,39 @@ form .button-search:focus {
 }
 
 .range-toggle {
-  position: absolute;
-  top: -9px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   width: 20px;
-  height: 23px;
-  background-image: url("../img/filter-button.svg");
+  height: 20px;
+  top: -10px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
+.range-toggle::before {
+  position: absolute;
+  content: " ";
+  width: 4px;
+  height: 4px;
+  top: 8px;
+  left: 8px;
+  border-radius: 50%;
+  background: #ababab;
+}
+
+.range-toggle:hover::before {
+  border-radius: 20%;
+}
+
 .range-toggle-min {
-  left: 0;
+  left: 0%;
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 70%;
 }
 
 .filter-range .btn-transparent {
@@ -867,6 +929,7 @@ form .button-search:focus {
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -888,6 +951,7 @@ form .button-search:focus {
   margin-right: 45px;
   font-size: 21px;
   font-weight: 700;
+  color: #000000;
 }
 
 .sort {
@@ -905,6 +969,7 @@ form .button-search:focus {
   padding: 0;
   font-size: 12px;
   line-height: 18px;
+  color: #000000;
 }
 
 .sort-type {
@@ -927,8 +992,8 @@ form .button-search:focus {
 }
 
 .sort-link {
-  color: #cacaca;
-  border-bottom: 1px dashed #81b3d2;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #81b3d2;
 }
 
 a.sort-link-active {
@@ -958,16 +1023,21 @@ a.sort-link-active {
   margin-right: 7px;
 }
 
-.arrow-active path {
-  fill: #81b3d2;
-}
-
 .arrow:focus path {
   fill: #81b3d2;
 }
 
 .arrow:hover path {
   fill: #000000;
+}
+
+.arrow-active path {
+  fill: #81b3d2;
+}
+
+.arrow-active:hover path,
+.arrow-active:focus path {
+  fill: #81b3d2;
 }
 
 .hotels-list {
@@ -983,7 +1053,6 @@ a.sort-link-active {
   padding: 0;
   list-style: none;
 }
-
 
 .hotels-item {
   display: -webkit-box;
@@ -1009,24 +1078,12 @@ a.sort-link-active {
   display: block;
 }
 
-.hotel-description a {
-  color: #000000;
-}
-
-.hotel-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .hotel-name {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  vertical-align: top;
   margin-top: -5px;
   margin-bottom: 8px;
-  padding-right: 40px;
+  color: #000000;
   font-size: 21px;
   font-weight: 700;
 }
@@ -1040,53 +1097,58 @@ a.sort-link-active {
   color: #cacaca;
 }
 
+.hotel-specified {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
 .hotel-type,
 .hotel-price {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   padding: 0;
   line-height: 21px;
 }
 
-.hotel-description-col .button {
-  display: block;
+.hotel-detailed {
   margin: 0 auto;
-  padding: 3px 5px;
+  padding: 4px 16px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-weight: 700;
   cursor: pointer;
 }
 
-.hotel-description .button:hover {
+.hotel-detailed:hover {
   background-color: #669ec0;
 }
 
-.hotel-description .button:focus {
+.hotel-detailed:focus {
   background-color: #5496bd;
   color: #88b6d1;
 }
 
-.hotel-description-col .button-brown {
-  display: block;
+.hotel-reserve {
   margin: 0 auto;
-  padding: 3px 17px;
+  padding: 4px 17px;
   width: 142px;
   background-color: #766357;
+  color: #ffffff;
+  font-weight: 700;
 }
 
-.hotel-description .button-brown:hover {
+.hotel-reserve:hover {
   background-color: #604e43;
 }
 
-.hotel-description .button-brown:focus {
+.hotel-reserve:focus {
   background-color: #503e33;
   color: #928a85;
 }
 
 .hotel-description-col {
   margin-right: 6px;
-}
-
-.hotel-description-col a {
-  background-color: #81b3d2;
 }
 
 .hotel-rating {
@@ -1128,4 +1190,30 @@ a.sort-link-active {
   line-height: 21px;
   background-color: #f2f2f2;
   color: #666666;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
