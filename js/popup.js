@@ -5,6 +5,8 @@ var departuredate = popup.querySelector("[name=departuredate]");
 
 var form = document.querySelector("form");
 
+popup.classList.remove("modal-show");
+
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.toggle("modal-show");
@@ -14,6 +16,6 @@ button.addEventListener("click", function (evt) {
 form.addEventListener("submit", function(evt) {
   if (!entrancedate.value || !departuredate.value) {
     evt.preventDefault();
-    popup.classList.add("modal-error")
+    popup.classList.add("modal-error");
   }
 });
