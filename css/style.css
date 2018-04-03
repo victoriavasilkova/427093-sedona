@@ -467,17 +467,22 @@ img {
   color: @font-color;
 }
 
+.field:-moz-placeholder {
+  opacity: 1;
+  color: @font-color;
+}
+
 .field::-webkit-input-placeholder {
   opacity: 1;
   color: @font-color;
 }
 
-::-webkit-input-placeholder {
+.field:-ms-input-placeholder {
   opacity: 1;
   color: #000000;
 }
 
-:-ms-input-placeholder {
+.field::-ms-input-placeholder {
   opacity: 1;
   color: #000000;
 }
@@ -911,11 +916,16 @@ form .button-search:focus {
   background: #ababab;
 }
 
+.range-toggle:hover {
+  width: 22px;
+  height: 22px;
+}
+
 .range-toggle:hover::before {
-  width: 6px;
-  height: 6px;
-  top: 7px;
-  left: 7px;
+  width: 4px;
+  height: 4px;
+  top: 9px;
+  left: 9px;
 }
 
 .range-toggle-min {
