@@ -306,6 +306,18 @@ img {
 }
 
 .feature p {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.feature-row-blue p {
+  width: 305px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.feature-icon p {
   width: 285px;
   margin: 0 auto;
   padding: 0;
@@ -328,7 +340,6 @@ img {
   padding: 0;
   text-align: center;
 }
-
 .booking-title {
   word-wrap: break-word;
   margin: 0 auto;
@@ -462,19 +473,20 @@ img {
       flex-shrink: 1;
 }
 
-.field::-moz-placeholder {
-  opacity: 1;
-  color: @font-color;
-}
 
 .field:-moz-placeholder {
   opacity: 1;
-  color: @font-color;
+  color: #000000;
+}
+
+.field::-moz-placeholder {
+  opacity: 1;
+  color: #000000;
 }
 
 .field::-webkit-input-placeholder {
   opacity: 1;
-  color: @font-color;
+  color: #000000;
 }
 
 .field:-ms-input-placeholder {
@@ -483,6 +495,11 @@ img {
 }
 
 .field::-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.field::placeholder {
   opacity: 1;
   color: #000000;
 }
@@ -715,7 +732,7 @@ form .button-search:focus {
 }
 
 .copyright svg {
-  margin-left: 5px;
+  margin-left: 10px;
   vertical-align: middle;
 }
 
@@ -807,12 +824,12 @@ form .button-search:focus {
 }
 
 .checkbox-field:disabled + .checkbox-label::before {
-  width: 27px;
+  width: 23px;
   height: 23px;
   background-image: url("../img/disabled-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 27px 23px;
+  background-size: 23px 23px;
 }
 
 .filter-range {
@@ -878,7 +895,7 @@ form .button-search:focus {
 
 .range-controls {
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 32px;
 }
 
 .range-controls .scale {
@@ -893,12 +910,12 @@ form .button-search:focus {
 }
 
 .range-toggle {
-  position: relative;
+  position: absolute;
   display: inline-block;
   vertical-align: top;
   width: 20px;
   height: 20px;
-  top: -10px;
+  top: -9px;
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
@@ -933,7 +950,7 @@ form .button-search:focus {
 }
 
 .range-toggle-max {
-  left: 70%;
+  left: 80%;
 }
 
 .filter-range .btn-transparent {
