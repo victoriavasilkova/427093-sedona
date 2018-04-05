@@ -465,14 +465,14 @@ img {
   display: block;
   width: 346px;
   margin-left: 16px;
-  padding: 11px 36px 11px 12px;
+  padding: 9px 36px 9px 12px;
+  border: 2px solid #f2f2f2;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   -ms-flex-negative: 1;
       flex-shrink: 1;
 }
-
 
 .field:-moz-placeholder {
   opacity: 1;
@@ -510,7 +510,7 @@ img {
 
 .field:focus {
   background-color: #ffffff;
-  outline: 2px solid #e5e5e5;
+  border: 2px solid #e5e5e5;
 }
 
 .calendar {
@@ -572,7 +572,6 @@ img {
 .booking-amount input {
   width: 40px;
   height: 38px;
-  padding: 11px 0;
   text-align: center;
 }
 
@@ -815,12 +814,12 @@ form .button-search:focus {
 }
 
 .checkbox-field:checked + .checkbox-label::before {
-  width: 27px;
+  width: 26px;
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 27px 23px;
+  background-size: 26px 23px;
 }
 
 .checkbox-field:disabled + .checkbox-label::before {
@@ -830,6 +829,15 @@ form .button-search:focus {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 23px 23px;
+}
+
+.checkbox-field:checked:disabled + .checkbox-label::before {
+  width: 26px;
+  height: 23px;
+  background-image: url("../img/disabled-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 26px 23px;
 }
 
 .filter-range {
@@ -933,12 +941,14 @@ form .button-search:focus {
   background: #ababab;
 }
 
-.range-toggle:hover {
+.range-toggle:hover,
+.range-toggle:focus {
   width: 22px;
   height: 22px;
 }
 
-.range-toggle:hover::before {
+.range-toggle:hover::before,
+.range-toggle:focus::before {
   width: 4px;
   height: 4px;
   top: 9px;
